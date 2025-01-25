@@ -1,5 +1,6 @@
 package com.sachith.address.controller;
 
+import com.sachith.address.model.Address;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AddressController {
 
     @GetMapping()
-    public ResponseEntity<String> getAddress(){
-        return ResponseEntity.ok("Rathna, Eleboda, Gintota");
+    public ResponseEntity<Address> getAddress(){
+        return ResponseEntity.ok(new Address("Rathna, Eleboda, Gintota"));
     }
 }

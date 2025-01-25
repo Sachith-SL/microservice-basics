@@ -1,5 +1,6 @@
 package com.sachith.employee.controller;
 
+import com.sachith.employee.model.Address;
 import com.sachith.employee.model.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> getEmployee(){
 
         //todo: take address from address service
-        String address = restTemplate.getForObject("http://localhost:8081/v1/addresses",String.class);
+        Address address = restTemplate.getForObject("http://localhost:8081/v1/addresses",Address.class);
 
         logger.info("Fetching employee details...");
         return ResponseEntity.ok(new Employee(1,"Sachith","0765510800", address));

@@ -10,12 +10,12 @@ public class Employee {
     private Integer id;
     private String name;
     private String phoneNumber;
-    private String address;
+    private Address address;
 
     public Employee() {
     }
 
-    public Employee(Integer id, String name, String phoneNumber, String address) {
+    public Employee(Integer id, String name, String phoneNumber, Address address) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -46,11 +46,11 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 }
